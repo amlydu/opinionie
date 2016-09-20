@@ -30,10 +30,22 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
 
+  ###
+  ## Gemspec Dependency Notes
   # The benefit of putting a dependency specification inside of opinionie.gemspec
   # rather than the Gemfile is that anybody who runs gem install foodie --dev will
   # get these development dependencies installed too.
     # This command is used for when people wish to test a gem without having to fork
     # it or clone it from GitHub
+  # If we wanted to specify a particular version we may use this line:
+    # Ex) spec.add_dependency "activesupport", "4.2.0"
+  # Or specify a version constraint:
+    # spec.add_dependency "activesupport", ">= 4.2.0"
+  # However, relying on a version simply greater than the latest-at-the-time is a sure-fire
+  # way to run into problems later on down the line.
+    # Try to always use ~> for specifying dependencies:
+      # spec.add_dependency "activesupport", "~> 4.2.0"
   spec.add_development_dependency "rspec", "~> 3.2"
+  spec.add_dependency "activesupport", "~> 4.2.0"
+
 end

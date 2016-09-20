@@ -1,3 +1,5 @@
+require 'active_support/inflector'
+
 module Opinionie
   class Opinion
     def initialize(opinion)
@@ -12,6 +14,10 @@ module Opinionie
         # Extract out into Constant
         'Your opinion is ok. Not great. But also not good.'
       end
+    end
+
+    def self.pluralize(word)
+      word.pluralize
     end
   end
 end
