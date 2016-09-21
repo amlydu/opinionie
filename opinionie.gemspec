@@ -47,5 +47,13 @@ Gem::Specification.new do |spec|
       # spec.add_dependency "activesupport", "~> 4.2.0"
   spec.add_development_dependency "rspec", "~> 3.2"
   spec.add_dependency "activesupport", "~> 4.2.0"
-
+  # Cucumber to define the Aruba tests
+  spec.add_development_dependency "cucumber"
+  # Aruba, a CLI testing tool
+  spec.add_development_dependency "aruba", '~> 0.14.2'
+  # Thor provides us with a handy API for defining our CLI,
+  # including usage banners and help output. The syntax is very
+  # similar to Rake. Additionally, Rails and Bundler both use Thor
+  # for their CLI interface as well as their generator base.
+  spec.add_dependency "thor"
 end
