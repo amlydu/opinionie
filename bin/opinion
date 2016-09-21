@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'opinionie/cli'
+
+# The .start method fires up our CLI class and will
+# look for a task that matches the one we ask for
+Opinionie::CLI.start
