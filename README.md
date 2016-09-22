@@ -22,7 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+- `#judge`
+  - Want some feedback on your opinions? Simply go into your command line and type the `opinionie judge` followed by whatever opinion you hold.
+  - Ex) `$ bundle exec opinionie judge "Some random opinion!"`
+- `#pluralize`
+  - If you want to know how the plural of a word, please use this super random command with the `--word` and simply follow with the word you want to know the plural of.
+  - Ex) `$ bundle exec opinionie pluralize --word "Potato"`
+    - `=> Potatoes`
+    - Is it magic???? Yes.
 
 ## Development
 
