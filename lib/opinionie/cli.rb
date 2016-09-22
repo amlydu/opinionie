@@ -24,11 +24,16 @@ require 'opinionie'
 #   Usage: bundle exec bin/opinion judge "Cheese is amazing"
 module Opinionie
   class CLI < Thor
+    # Usage:
+    #  opinionie judge "I like potato"
     desc "judge STRING", "Determines whether or not it likes your opinion or not."
     def judge(opinion)
       puts Opinionie::Opinion.judge(opinion)
     end
 
+    # Usage:
+    #  opinionie pluralize --word "Potato"
+    #  => Potatoes
     desc "pluralize", "Pluralizes a word"
     method_option :word, :aliases => "-w"
     def pluralize
